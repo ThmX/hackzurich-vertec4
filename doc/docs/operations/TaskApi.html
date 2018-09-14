@@ -1,0 +1,125 @@
+<div class="main-content">
+  <h2><a name=""></a></h2>
+  <p>This is the  API</p>
+
+  <h2><a name="createTask"></a>createTask</h2>
+  <hr>
+  <p></p>
+  <p></p>
+  <h3 class="section">URL</h3>
+  <code>http://hackzurich-vertec4.local/api/task</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>POST</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model=""><a href=""></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      
+      
+      <span class="param-in">Body: </span>
+      <span class="param-name">body</span>
+      <span class="param-type">Task(Task)</span>
+      
+      <p class="param-description">Task object that needs to be added</p>
+	  </li>
+  </ul>
+  <h2><a name="deleteTask"></a>deleteTask</h2>
+  <hr>
+  <p></p>
+  <p></p>
+  <h3 class="section">URL</h3>
+  <code>http://hackzurich-vertec4.local/api/task/{taskId}</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>DELETE</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model=""><a href=""></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">taskId</span>
+      <span class="param-type">Long</span>
+      
+      <p class="param-description">Task id to delete</p>
+	  </li>
+  </ul>
+  <h2><a name="getTaskById"></a>getTaskById</h2>
+  <hr>
+  <p></p>
+  <p>Returns a single task</p>
+  <h3 class="section">URL</h3>
+  <code>http://hackzurich-vertec4.local/api/task/{taskId}</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="Task"><a href="">Task</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">taskId</span>
+      <span class="param-type">Long</span>
+      
+      <p class="param-description">ID of task to return</p>
+	  </li>
+  </ul>
+  <h2><a name="readTasks"></a>readTasks</h2>
+  <hr>
+  <p></p>
+  
+  <h3 class="section">URL</h3>
+  <code>http://hackzurich-vertec4.local/api/tasks</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="Task"><a href="">List</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  </ul>
+  <h2><a name="updateTask"></a>updateTask</h2>
+  <hr>
+  <p></p>
+  <p></p>
+  <h3 class="section">URL</h3>
+  <code>http://hackzurich-vertec4.local/api/task/{taskId}</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>PUT</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model=""><a href=""></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">taskId</span>
+      <span class="param-type">Long</span>
+      
+      <p class="param-description">ID of task that needs to be updated</p>
+	  </li>
+	  <li class="parameter">
+      
+      
+      
+      
+      <span class="param-in">Body: </span>
+      <span class="param-name">body</span>
+      <span class="param-type">Task(Task)</span>
+      
+      <p class="param-description">Task object that needs to be added</p>
+	  </li>
+  </ul>
+</div>

@@ -3,18 +3,16 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Configuration } from './configuration';
 
-import { PetService } from './api/pet.service';
-import { StoreService } from './api/store.service';
-import { UserService } from './api/user.service';
+import { ProjectService } from './api/project.service';
+import { TaskService } from './api/task.service';
 
 @NgModule({
   imports:      [ CommonModule, HttpClientModule ],
   declarations: [],
   exports:      [],
   providers: [
-    PetService,
-    StoreService,
-    UserService ]
+    ProjectService,
+    TaskService ]
 })
 export class ApiModule {
     public static forRoot(configurationFactory: () => Configuration): ModuleWithProviders {
