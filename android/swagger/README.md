@@ -1,4 +1,4 @@
-# swagger-android-client
+# swagger-java-client
 
 ## Requirements
 
@@ -27,7 +27,7 @@ Add this dependency to your project's POM:
 ```xml
 <dependency>
     <groupId>io.swagger</groupId>
-    <artifactId>swagger-android-client</artifactId>
+    <artifactId>swagger-java-client</artifactId>
     <version>1.0.0</version>
     <scope>compile</scope>
 </dependency>
@@ -38,7 +38,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "io.swagger:swagger-android-client:1.0.0"
+compile "io.swagger:swagger-java-client:1.0.0"
 ```
 
 ### Others
@@ -49,7 +49,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/swagger-android-client-1.0.0.jar
+* target/swagger-java-client-1.0.0.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -58,11 +58,18 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
 import io.swagger.client.api.ProjectApi;
+
+import java.io.File;
+import java.util.*;
 
 public class ProjectApiExample {
 
     public static void main(String[] args) {
+        
         ProjectApi apiInstance = new ProjectApi();
         Project body = new Project(); // Project | Project object that needs to be added
         try {

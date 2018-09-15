@@ -1,2 +1,1 @@
-include ':app'
-include ':swagger'
+include ':app', ':swagger'

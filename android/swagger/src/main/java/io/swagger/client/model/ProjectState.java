@@ -1,4 +1,4 @@
-/**
+/*
  * HackZurich'18 Vertec 4.0
  * API for the HackZurich'18 Vertec 4.0 Project
  *
@@ -10,66 +10,111 @@
  * Do not edit the class manually.
  */
 
+
 package io.swagger.client.model;
 
-import io.swagger.annotations.*;
+import java.util.Objects;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
-@ApiModel(description = "")
+/**
+ * ProjectState
+ */
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-09-15T10:27:27.424+02:00")
 public class ProjectState {
-  
   @SerializedName("_id")
   private String id = null;
+
   @SerializedName("project_id")
   private String projectId = null;
+
   @SerializedName("actual")
   private Long actual = null;
+
   @SerializedName("number_of_tasks")
   private Long numberOfTasks = null;
 
-  /**
-   **/
+  public ProjectState id(String id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
   @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
+
   public void setId(String id) {
     this.id = id;
   }
 
-  /**
-   **/
+  public ProjectState projectId(String projectId) {
+    this.projectId = projectId;
+    return this;
+  }
+
+   /**
+   * Get projectId
+   * @return projectId
+  **/
   @ApiModelProperty(value = "")
   public String getProjectId() {
     return projectId;
   }
+
   public void setProjectId(String projectId) {
     this.projectId = projectId;
   }
 
-  /**
-   **/
+  public ProjectState actual(Long actual) {
+    this.actual = actual;
+    return this;
+  }
+
+   /**
+   * Get actual
+   * @return actual
+  **/
   @ApiModelProperty(value = "")
   public Long getActual() {
     return actual;
   }
+
   public void setActual(Long actual) {
     this.actual = actual;
   }
 
-  /**
-   **/
+  public ProjectState numberOfTasks(Long numberOfTasks) {
+    this.numberOfTasks = numberOfTasks;
+    return this;
+  }
+
+   /**
+   * Get numberOfTasks
+   * @return numberOfTasks
+  **/
   @ApiModelProperty(value = "")
   public Long getNumberOfTasks() {
     return numberOfTasks;
   }
+
   public void setNumberOfTasks(Long numberOfTasks) {
     this.numberOfTasks = numberOfTasks;
   }
 
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -77,32 +122,41 @@ public class ProjectState {
       return false;
     }
     ProjectState projectState = (ProjectState) o;
-    return (this.id == null ? projectState.id == null : this.id.equals(projectState.id)) &&
-        (this.projectId == null ? projectState.projectId == null : this.projectId.equals(projectState.projectId)) &&
-        (this.actual == null ? projectState.actual == null : this.actual.equals(projectState.actual)) &&
-        (this.numberOfTasks == null ? projectState.numberOfTasks == null : this.numberOfTasks.equals(projectState.numberOfTasks));
+    return Objects.equals(this.id, projectState.id) &&
+        Objects.equals(this.projectId, projectState.projectId) &&
+        Objects.equals(this.actual, projectState.actual) &&
+        Objects.equals(this.numberOfTasks, projectState.numberOfTasks);
   }
 
   @Override
   public int hashCode() {
-    int result = 17;
-    result = 31 * result + (this.id == null ? 0: this.id.hashCode());
-    result = 31 * result + (this.projectId == null ? 0: this.projectId.hashCode());
-    result = 31 * result + (this.actual == null ? 0: this.actual.hashCode());
-    result = 31 * result + (this.numberOfTasks == null ? 0: this.numberOfTasks.hashCode());
-    return result;
+    return Objects.hash(id, projectId, actual, numberOfTasks);
   }
 
+
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ProjectState {\n");
     
-    sb.append("  id: ").append(id).append("\n");
-    sb.append("  projectId: ").append(projectId).append("\n");
-    sb.append("  actual: ").append(actual).append("\n");
-    sb.append("  numberOfTasks: ").append(numberOfTasks).append("\n");
-    sb.append("}\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    projectId: ").append(toIndentedString(projectId)).append("\n");
+    sb.append("    actual: ").append(toIndentedString(actual)).append("\n");
+    sb.append("    numberOfTasks: ").append(toIndentedString(numberOfTasks)).append("\n");
+    sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+
 }
+

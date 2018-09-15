@@ -1,4 +1,4 @@
-/**
+/*
  * HackZurich'18 Vertec 4.0
  * API for the HackZurich'18 Vertec 4.0 Project
  *
@@ -10,38 +10,45 @@
  * Do not edit the class manually.
  */
 
+
 package io.swagger.client.auth;
 
 import io.swagger.client.Pair;
 
-import android.util.Base64;
+import com.squareup.okhttp.Credentials;
 
 import java.util.Map;
 import java.util.List;
 
+import java.io.UnsupportedEncodingException;
+
 public class HttpBasicAuth implements Authentication {
-  private String username;
-  private String password;
+    private String username;
+    private String password;
 
-  public String getUsername() {
-    return username;
-  }
+    public String getUsername() {
+        return username;
+    }
 
-  public void setUsername(String username) {
-    this.username = username;
-  }
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-  public String getPassword() {
-    return password;
-  }
+    public String getPassword() {
+        return password;
+    }
 
-  public void setPassword(String password) {
-    this.password = password;
-  }
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-  @Override
-  public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams) {
-    String str = (username == null ? "" : username) + ":" + (password == null ? "" : password);
-    headerParams.put("Authorization", "Basic " + Base64.encodeToString(str.getBytes(), Base64.DEFAULT));
-  }
+    @Override
+    public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams) {
+        if (username == null && password == null) {
+            return;
+        }
+        headerParams.put("Authorization", Credentials.basic(
+            username == null ? "" : username,
+            password == null ? "" : password));
+    }
 }

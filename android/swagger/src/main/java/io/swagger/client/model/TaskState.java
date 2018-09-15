@@ -1,4 +1,4 @@
-/**
+/*
  * HackZurich'18 Vertec 4.0
  * API for the HackZurich'18 Vertec 4.0 Project
  *
@@ -10,66 +10,111 @@
  * Do not edit the class manually.
  */
 
+
 package io.swagger.client.model;
 
-import io.swagger.annotations.*;
+import java.util.Objects;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
-@ApiModel(description = "")
+/**
+ * TaskState
+ */
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-09-15T10:27:27.424+02:00")
 public class TaskState {
-  
   @SerializedName("_id")
   private String id = null;
+
   @SerializedName("task_id")
   private String taskId = null;
+
   @SerializedName("actual")
   private Long actual = null;
+
   @SerializedName("number_of_events")
   private Long numberOfEvents = null;
 
-  /**
-   **/
+  public TaskState id(String id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
   @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
+
   public void setId(String id) {
     this.id = id;
   }
 
-  /**
-   **/
+  public TaskState taskId(String taskId) {
+    this.taskId = taskId;
+    return this;
+  }
+
+   /**
+   * Get taskId
+   * @return taskId
+  **/
   @ApiModelProperty(value = "")
   public String getTaskId() {
     return taskId;
   }
+
   public void setTaskId(String taskId) {
     this.taskId = taskId;
   }
 
-  /**
-   **/
+  public TaskState actual(Long actual) {
+    this.actual = actual;
+    return this;
+  }
+
+   /**
+   * Get actual
+   * @return actual
+  **/
   @ApiModelProperty(value = "")
   public Long getActual() {
     return actual;
   }
+
   public void setActual(Long actual) {
     this.actual = actual;
   }
 
-  /**
-   **/
+  public TaskState numberOfEvents(Long numberOfEvents) {
+    this.numberOfEvents = numberOfEvents;
+    return this;
+  }
+
+   /**
+   * Get numberOfEvents
+   * @return numberOfEvents
+  **/
   @ApiModelProperty(value = "")
   public Long getNumberOfEvents() {
     return numberOfEvents;
   }
+
   public void setNumberOfEvents(Long numberOfEvents) {
     this.numberOfEvents = numberOfEvents;
   }
 
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -77,32 +122,41 @@ public class TaskState {
       return false;
     }
     TaskState taskState = (TaskState) o;
-    return (this.id == null ? taskState.id == null : this.id.equals(taskState.id)) &&
-        (this.taskId == null ? taskState.taskId == null : this.taskId.equals(taskState.taskId)) &&
-        (this.actual == null ? taskState.actual == null : this.actual.equals(taskState.actual)) &&
-        (this.numberOfEvents == null ? taskState.numberOfEvents == null : this.numberOfEvents.equals(taskState.numberOfEvents));
+    return Objects.equals(this.id, taskState.id) &&
+        Objects.equals(this.taskId, taskState.taskId) &&
+        Objects.equals(this.actual, taskState.actual) &&
+        Objects.equals(this.numberOfEvents, taskState.numberOfEvents);
   }
 
   @Override
   public int hashCode() {
-    int result = 17;
-    result = 31 * result + (this.id == null ? 0: this.id.hashCode());
-    result = 31 * result + (this.taskId == null ? 0: this.taskId.hashCode());
-    result = 31 * result + (this.actual == null ? 0: this.actual.hashCode());
-    result = 31 * result + (this.numberOfEvents == null ? 0: this.numberOfEvents.hashCode());
-    return result;
+    return Objects.hash(id, taskId, actual, numberOfEvents);
   }
 
+
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TaskState {\n");
     
-    sb.append("  id: ").append(id).append("\n");
-    sb.append("  taskId: ").append(taskId).append("\n");
-    sb.append("  actual: ").append(actual).append("\n");
-    sb.append("  numberOfEvents: ").append(numberOfEvents).append("\n");
-    sb.append("}\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    taskId: ").append(toIndentedString(taskId)).append("\n");
+    sb.append("    actual: ").append(toIndentedString(actual)).append("\n");
+    sb.append("    numberOfEvents: ").append(toIndentedString(numberOfEvents)).append("\n");
+    sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+
 }
+

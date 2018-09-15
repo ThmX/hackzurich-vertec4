@@ -1,4 +1,4 @@
-/**
+/*
  * HackZurich'18 Vertec 4.0
  * API for the HackZurich'18 Vertec 4.0 Project
  *
@@ -10,91 +10,154 @@
  * Do not edit the class manually.
  */
 
+
 package io.swagger.client.model;
 
-import java.util.Date;
-import io.swagger.annotations.*;
+import java.util.Objects;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 
-@ApiModel(description = "")
+/**
+ * Project
+ */
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-09-15T10:27:27.424+02:00")
 public class Project {
-  
   @SerializedName("_id")
   private String id = null;
+
   @SerializedName("name")
   private String name = null;
+
   @SerializedName("description")
   private String description = null;
+
   @SerializedName("budget")
   private Long budget = null;
-  @SerializedName("start_date")
-  private Date startDate = null;
-  @SerializedName("end_date")
-  private Date endDate = null;
 
-  /**
-   **/
+  @SerializedName("start_date")
+  private OffsetDateTime startDate = null;
+
+  @SerializedName("end_date")
+  private OffsetDateTime endDate = null;
+
+  public Project id(String id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
   @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
+
   public void setId(String id) {
     this.id = id;
   }
 
-  /**
-   **/
+  public Project name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Get name
+   * @return name
+  **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
+
   public void setName(String name) {
     this.name = name;
   }
 
-  /**
-   **/
+  public Project description(String description) {
+    this.description = description;
+    return this;
+  }
+
+   /**
+   * Get description
+   * @return description
+  **/
   @ApiModelProperty(value = "")
   public String getDescription() {
     return description;
   }
+
   public void setDescription(String description) {
     this.description = description;
   }
 
-  /**
-   **/
+  public Project budget(Long budget) {
+    this.budget = budget;
+    return this;
+  }
+
+   /**
+   * Get budget
+   * @return budget
+  **/
   @ApiModelProperty(value = "")
   public Long getBudget() {
     return budget;
   }
+
   public void setBudget(Long budget) {
     this.budget = budget;
   }
 
-  /**
-   **/
+  public Project startDate(OffsetDateTime startDate) {
+    this.startDate = startDate;
+    return this;
+  }
+
+   /**
+   * Get startDate
+   * @return startDate
+  **/
   @ApiModelProperty(value = "")
-  public Date getStartDate() {
+  public OffsetDateTime getStartDate() {
     return startDate;
   }
-  public void setStartDate(Date startDate) {
+
+  public void setStartDate(OffsetDateTime startDate) {
     this.startDate = startDate;
   }
 
-  /**
-   **/
+  public Project endDate(OffsetDateTime endDate) {
+    this.endDate = endDate;
+    return this;
+  }
+
+   /**
+   * Get endDate
+   * @return endDate
+  **/
   @ApiModelProperty(value = "")
-  public Date getEndDate() {
+  public OffsetDateTime getEndDate() {
     return endDate;
   }
-  public void setEndDate(Date endDate) {
+
+  public void setEndDate(OffsetDateTime endDate) {
     this.endDate = endDate;
   }
 
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -102,38 +165,45 @@ public class Project {
       return false;
     }
     Project project = (Project) o;
-    return (this.id == null ? project.id == null : this.id.equals(project.id)) &&
-        (this.name == null ? project.name == null : this.name.equals(project.name)) &&
-        (this.description == null ? project.description == null : this.description.equals(project.description)) &&
-        (this.budget == null ? project.budget == null : this.budget.equals(project.budget)) &&
-        (this.startDate == null ? project.startDate == null : this.startDate.equals(project.startDate)) &&
-        (this.endDate == null ? project.endDate == null : this.endDate.equals(project.endDate));
+    return Objects.equals(this.id, project.id) &&
+        Objects.equals(this.name, project.name) &&
+        Objects.equals(this.description, project.description) &&
+        Objects.equals(this.budget, project.budget) &&
+        Objects.equals(this.startDate, project.startDate) &&
+        Objects.equals(this.endDate, project.endDate);
   }
 
   @Override
   public int hashCode() {
-    int result = 17;
-    result = 31 * result + (this.id == null ? 0: this.id.hashCode());
-    result = 31 * result + (this.name == null ? 0: this.name.hashCode());
-    result = 31 * result + (this.description == null ? 0: this.description.hashCode());
-    result = 31 * result + (this.budget == null ? 0: this.budget.hashCode());
-    result = 31 * result + (this.startDate == null ? 0: this.startDate.hashCode());
-    result = 31 * result + (this.endDate == null ? 0: this.endDate.hashCode());
-    return result;
+    return Objects.hash(id, name, description, budget, startDate, endDate);
   }
 
+
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Project {\n");
     
-    sb.append("  id: ").append(id).append("\n");
-    sb.append("  name: ").append(name).append("\n");
-    sb.append("  description: ").append(description).append("\n");
-    sb.append("  budget: ").append(budget).append("\n");
-    sb.append("  startDate: ").append(startDate).append("\n");
-    sb.append("  endDate: ").append(endDate).append("\n");
-    sb.append("}\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    budget: ").append(toIndentedString(budget)).append("\n");
+    sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
+    sb.append("    endDate: ").append(toIndentedString(endDate)).append("\n");
+    sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+
 }
+

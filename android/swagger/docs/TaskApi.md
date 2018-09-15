@@ -22,7 +22,9 @@ Add a new task
 ### Example
 ```java
 // Import classes:
+//import io.swagger.client.ApiException;
 //import io.swagger.client.api.TaskApi;
+
 
 TaskApi apiInstance = new TaskApi();
 Task body = new Task(); // Task | Task object that needs to be added
@@ -64,7 +66,9 @@ Deletes a task
 ### Example
 ```java
 // Import classes:
+//import io.swagger.client.ApiException;
 //import io.swagger.client.api.TaskApi;
+
 
 TaskApi apiInstance = new TaskApi();
 String taskId = "taskId_example"; // String | Task id to delete
@@ -106,7 +110,9 @@ Returns a single task
 ### Example
 ```java
 // Import classes:
+//import io.swagger.client.ApiException;
 //import io.swagger.client.api.TaskApi;
+
 
 TaskApi apiInstance = new TaskApi();
 String taskId = "taskId_example"; // String | ID of task to return
@@ -147,7 +153,9 @@ Finds all the tasks
 ### Example
 ```java
 // Import classes:
+//import io.swagger.client.ApiException;
 //import io.swagger.client.api.TaskApi;
+
 
 TaskApi apiInstance = new TaskApi();
 try {
@@ -186,7 +194,9 @@ Updates a task
 ### Example
 ```java
 // Import classes:
+//import io.swagger.client.ApiException;
 //import io.swagger.client.api.TaskApi;
+
 
 TaskApi apiInstance = new TaskApi();
 String taskId = "taskId_example"; // String | ID of task that needs to be updated

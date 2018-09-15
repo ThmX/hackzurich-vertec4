@@ -22,7 +22,9 @@ Add a new project
 ### Example
 ```java
 // Import classes:
+//import io.swagger.client.ApiException;
 //import io.swagger.client.api.ProjectApi;
+
 
 ProjectApi apiInstance = new ProjectApi();
 Project body = new Project(); // Project | Project object that needs to be added
@@ -64,7 +66,9 @@ Deletes a project
 ### Example
 ```java
 // Import classes:
+//import io.swagger.client.ApiException;
 //import io.swagger.client.api.ProjectApi;
+
 
 ProjectApi apiInstance = new ProjectApi();
 String projectId = "projectId_example"; // String | Project id to delete
@@ -106,7 +110,9 @@ Returns a single project
 ### Example
 ```java
 // Import classes:
+//import io.swagger.client.ApiException;
 //import io.swagger.client.api.ProjectApi;
+
 
 ProjectApi apiInstance = new ProjectApi();
 String projectId = "projectId_example"; // String | ID of project to return
@@ -147,7 +153,9 @@ Finds all the projects
 ### Example
 ```java
 // Import classes:
+//import io.swagger.client.ApiException;
 //import io.swagger.client.api.ProjectApi;
+
 
 ProjectApi apiInstance = new ProjectApi();
 try {
@@ -186,7 +194,9 @@ Updates a project
 ### Example
 ```java
 // Import classes:
+//import io.swagger.client.ApiException;
 //import io.swagger.client.api.ProjectApi;
+
 
 ProjectApi apiInstance = new ProjectApi();
 String projectId = "projectId_example"; // String | ID of project that needs to be updated

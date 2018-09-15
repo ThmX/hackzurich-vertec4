@@ -1,4 +1,4 @@
-/**
+/*
  * HackZurich'18 Vertec 4.0
  * API for the HackZurich'18 Vertec 4.0 Project
  *
@@ -10,52 +10,82 @@
  * Do not edit the class manually.
  */
 
+
 package io.swagger.client;
 
+import java.util.Map;
+import java.util.List;
+
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-09-15T10:27:27.424+02:00")
 public class ApiException extends Exception {
-  int code = 0;
-  String message = null;
+    private int code = 0;
+    private Map<String, List<String>> responseHeaders = null;
+    private String responseBody = null;
 
-  public ApiException() {}
+    public ApiException() {}
 
-  public ApiException(int code, String message) {
-    this.code = code;
-    this.message = message;
-  }
+    public ApiException(Throwable throwable) {
+        super(throwable);
+    }
 
-  /**
-   * Get the HTTP status code.
-   *
-   * @return HTTP status code
-   */
-  public int getCode() {
-    return code;
-  }
+    public ApiException(String message) {
+        super(message);
+    }
 
-  /**
-   * Set the HTTP status code.
-   *
-   * @param code HTTP status code.
-   */
-  public void setCode(int code) {
-    this.code = code;
-  }
+    public ApiException(String message, Throwable throwable, int code, Map<String, List<String>> responseHeaders, String responseBody) {
+        super(message, throwable);
+        this.code = code;
+        this.responseHeaders = responseHeaders;
+        this.responseBody = responseBody;
+    }
 
-  /**
-   * Get the error message.
-   *
-   * @return Error message.
-   */
-  public String getMessage() {
-    return message;
-  }
+    public ApiException(String message, int code, Map<String, List<String>> responseHeaders, String responseBody) {
+        this(message, (Throwable) null, code, responseHeaders, responseBody);
+    }
 
-  /**
-   * Set the error messages.
-   *
-   * @param message Error message.
-   */
-  public void setMessage(String message) {
-    this.message = message;
-  }
+    public ApiException(String message, Throwable throwable, int code, Map<String, List<String>> responseHeaders) {
+        this(message, throwable, code, responseHeaders, null);
+    }
+
+    public ApiException(int code, Map<String, List<String>> responseHeaders, String responseBody) {
+        this((String) null, (Throwable) null, code, responseHeaders, responseBody);
+    }
+
+    public ApiException(int code, String message) {
+        super(message);
+        this.code = code;
+    }
+
+    public ApiException(int code, String message, Map<String, List<String>> responseHeaders, String responseBody) {
+        this(code, message);
+        this.responseHeaders = responseHeaders;
+        this.responseBody = responseBody;
+    }
+
+    /**
+     * Get the HTTP status code.
+     *
+     * @return HTTP status code
+     */
+    public int getCode() {
+        return code;
+    }
+
+    /**
+     * Get the HTTP response headers.
+     *
+     * @return A map of list of string
+     */
+    public Map<String, List<String>> getResponseHeaders() {
+        return responseHeaders;
+    }
+
+    /**
+     * Get the HTTP response body.
+     *
+     * @return Response body in the form of string
+     */
+    public String getResponseBody() {
+        return responseBody;
+    }
 }

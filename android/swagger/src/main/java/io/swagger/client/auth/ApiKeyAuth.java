@@ -1,4 +1,4 @@
-/**
+/*
  * HackZurich'18 Vertec 4.0
  * API for the HackZurich'18 Vertec 4.0 Project
  *
@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+
 package io.swagger.client.auth;
 
 import io.swagger.client.Pair;
@@ -17,6 +18,7 @@ import io.swagger.client.Pair;
 import java.util.Map;
 import java.util.List;
 
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-09-15T10:27:27.424+02:00")
 public class ApiKeyAuth implements Authentication {
   private final String location;
   private final String paramName;
@@ -55,10 +57,10 @@ public class ApiKeyAuth implements Authentication {
 
   @Override
   public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams) {
-    String value;
     if (apiKey == null) {
       return;
     }
+    String value;
     if (apiKeyPrefix != null) {
       value = apiKeyPrefix + " " + apiKey;
     } else {
