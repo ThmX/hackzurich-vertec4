@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Long** |  |  [optional]
-**taskId** | **Long** |  |  [optional]
+**id** | **String** |  |  [optional]
+**taskId** | **String** |  |  [optional]
 **actual** | **Long** |  |  [optional]
 **numberOfEvents** | **Long** |  |  [optional]
 

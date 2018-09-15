@@ -1,6 +1,6 @@
 # TaskApi
 
-All URIs are relative to *http://hackzurich-vertec4.local/api*
+All URIs are relative to *http://localhost:8080/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -67,7 +67,7 @@ Deletes a task
 //import io.swagger.client.api.TaskApi;
 
 TaskApi apiInstance = new TaskApi();
-Long taskId = 789L; // Long | Task id to delete
+String taskId = "taskId_example"; // String | Task id to delete
 try {
     apiInstance.deleteTask(taskId);
 } catch (ApiException e) {
@@ -80,7 +80,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taskId** | **Long**| Task id to delete |
+ **taskId** | **String**| Task id to delete |
 
 ### Return type
 
@@ -109,7 +109,7 @@ Returns a single task
 //import io.swagger.client.api.TaskApi;
 
 TaskApi apiInstance = new TaskApi();
-Long taskId = 789L; // Long | ID of task to return
+String taskId = "taskId_example"; // String | ID of task to return
 try {
     Task result = apiInstance.getTaskById(taskId);
     System.out.println(result);
@@ -123,7 +123,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taskId** | **Long**| ID of task to return |
+ **taskId** | **String**| ID of task to return |
 
 ### Return type
 
@@ -189,7 +189,7 @@ Updates a task
 //import io.swagger.client.api.TaskApi;
 
 TaskApi apiInstance = new TaskApi();
-Long taskId = 789L; // Long | ID of task that needs to be updated
+String taskId = "taskId_example"; // String | ID of task that needs to be updated
 Task body = new Task(); // Task | Task object that needs to be added
 try {
     apiInstance.updateTask(taskId, body);
@@ -203,7 +203,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taskId** | **Long**| ID of task that needs to be updated |
+ **taskId** | **String**| ID of task that needs to be updated |
  **body** | [**Task**](Task.md)| Task object that needs to be added |
 
 ### Return type

@@ -19,7 +19,7 @@ exports.createProject = function(body) {
  * Deletes a project
  * 
  *
- * projectId Long Project id to delete
+ * projectId String Project id to delete
  * no response value expected for this operation
  **/
 exports.deleteProject = function(projectId) {
@@ -33,7 +33,7 @@ exports.deleteProject = function(projectId) {
  * Find project by ID
  * Returns a single project
  *
- * projectId Long ID of project to return
+ * projectId String ID of project to return
  * returns Project
  **/
 exports.getProjectById = function(projectId) {
@@ -43,8 +43,8 @@ exports.getProjectById = function(projectId) {
   "end_date" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",
   "description" : "description",
-  "id" : 0,
-  "budget" : 6,
+  "_id" : "_id",
+  "budget" : 0,
   "start_date" : "2000-01-23T04:56:07.000+00:00"
 };
     if (Object.keys(examples).length > 0) {
@@ -68,15 +68,15 @@ exports.readProjects = function() {
   "end_date" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",
   "description" : "description",
-  "id" : 0,
-  "budget" : 6,
+  "_id" : "_id",
+  "budget" : 0,
   "start_date" : "2000-01-23T04:56:07.000+00:00"
 }, {
   "end_date" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",
   "description" : "description",
-  "id" : 0,
-  "budget" : 6,
+  "_id" : "_id",
+  "budget" : 0,
   "start_date" : "2000-01-23T04:56:07.000+00:00"
 } ];
     if (Object.keys(examples).length > 0) {
@@ -92,7 +92,7 @@ exports.readProjects = function() {
  * Updates a project
  * 
  *
- * projectId Long ID of project that needs to be updated
+ * projectId String ID of project that needs to be updated
  * body Project Project object that needs to be added
  * no response value expected for this operation
  **/

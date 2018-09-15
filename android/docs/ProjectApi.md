@@ -1,6 +1,6 @@
 # ProjectApi
 
-All URIs are relative to *http://hackzurich-vertec4.local/api*
+All URIs are relative to *http://localhost:8080/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -67,7 +67,7 @@ Deletes a project
 //import io.swagger.client.api.ProjectApi;
 
 ProjectApi apiInstance = new ProjectApi();
-Long projectId = 789L; // Long | Project id to delete
+String projectId = "projectId_example"; // String | Project id to delete
 try {
     apiInstance.deleteProject(projectId);
 } catch (ApiException e) {
@@ -80,7 +80,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **projectId** | **Long**| Project id to delete |
+ **projectId** | **String**| Project id to delete |
 
 ### Return type
 
@@ -109,7 +109,7 @@ Returns a single project
 //import io.swagger.client.api.ProjectApi;
 
 ProjectApi apiInstance = new ProjectApi();
-Long projectId = 789L; // Long | ID of project to return
+String projectId = "projectId_example"; // String | ID of project to return
 try {
     Project result = apiInstance.getProjectById(projectId);
     System.out.println(result);
@@ -123,7 +123,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **projectId** | **Long**| ID of project to return |
+ **projectId** | **String**| ID of project to return |
 
 ### Return type
 
@@ -189,7 +189,7 @@ Updates a project
 //import io.swagger.client.api.ProjectApi;
 
 ProjectApi apiInstance = new ProjectApi();
-Long projectId = 789L; // Long | ID of project that needs to be updated
+String projectId = "projectId_example"; // String | ID of project that needs to be updated
 Project body = new Project(); // Project | Project object that needs to be added
 try {
     apiInstance.updateProject(projectId, body);
@@ -203,7 +203,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **projectId** | **Long**| ID of project that needs to be updated |
+ **projectId** | **String**| ID of project that needs to be updated |
  **body** | [**Project**](Project.md)| Project object that needs to be added |
 
 ### Return type

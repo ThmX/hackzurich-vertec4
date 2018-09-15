@@ -4,7 +4,7 @@ info:
   description: "API for the HackZurich'18 Vertec 4.0 Project"
   version: "1.0.0"
   title: "HackZurich'18 Vertec 4.0"
-host: "hackzurich-vertec4.local"
+host: "localhost:8080"
 basePath: "/api"
 tags:
 - name: "task"
@@ -67,8 +67,7 @@ paths:
         in: "path"
         description: "ID of project to return"
         required: true
-        type: "integer"
-        format: "int64"
+        type: "string"
       responses:
         200:
           description: "successful operation"
@@ -94,8 +93,7 @@ paths:
         in: "path"
         description: "ID of project that needs to be updated"
         required: true
-        type: "integer"
-        format: "int64"
+        type: "string"
       - in: "body"
         name: "body"
         description: "Project object that needs to be added"
@@ -119,8 +117,7 @@ paths:
         in: "path"
         description: "Project id to delete"
         required: true
-        type: "integer"
-        format: "int64"
+        type: "string"
       responses:
         400:
           description: "Invalid ID supplied"
@@ -182,8 +179,7 @@ paths:
         in: "path"
         description: "ID of task to return"
         required: true
-        type: "integer"
-        format: "int64"
+        type: "string"
       responses:
         200:
           description: "successful operation"
@@ -209,8 +205,7 @@ paths:
         in: "path"
         description: "ID of task that needs to be updated"
         required: true
-        type: "integer"
-        format: "int64"
+        type: "string"
       - in: "body"
         name: "body"
         description: "Task object that needs to be added"
@@ -234,8 +229,7 @@ paths:
         in: "path"
         description: "Task id to delete"
         required: true
-        type: "integer"
-        format: "int64"
+        type: "string"
       responses:
         400:
           description: "Invalid ID supplied"
@@ -246,9 +240,8 @@ definitions:
   Project:
     type: "object"
     properties:
-      id:
-        type: "integer"
-        format: "int64"
+      _id:
+        type: "string"
       name:
         type: "string"
       description:
@@ -266,18 +259,16 @@ definitions:
       end_date: "2000-01-23T04:56:07.000+00:00"
       name: "name"
       description: "description"
-      id: 0
-      budget: 6
+      _id: "_id"
+      budget: 0
       start_date: "2000-01-23T04:56:07.000+00:00"
   ProjectState:
     type: "object"
     properties:
-      id:
-        type: "integer"
-        format: "int64"
+      _id:
+        type: "string"
       project_id:
-        type: "integer"
-        format: "int64"
+        type: "string"
       actual:
         type: "integer"
         format: "int64"
@@ -287,12 +278,10 @@ definitions:
   Task:
     type: "object"
     properties:
-      id:
-        type: "integer"
-        format: "int64"
+      _id:
+        type: "string"
       project_id:
-        type: "integer"
-        format: "int64"
+        type: "string"
       name:
         type: "string"
       description:
@@ -308,21 +297,19 @@ definitions:
         format: "date-time"
     example:
       end_date: "2000-01-23T04:56:07.000+00:00"
-      project_id: 6
+      project_id: "project_id"
       name: "name"
       description: "description"
-      id: 0
-      budget: 1
+      _id: "_id"
+      budget: 0
       start_date: "2000-01-23T04:56:07.000+00:00"
   TaskState:
     type: "object"
     properties:
-      id:
-        type: "integer"
-        format: "int64"
+      _id:
+        type: "string"
       task_id:
-        type: "integer"
-        format: "int64"
+        type: "string"
       actual:
         type: "integer"
         format: "int64"

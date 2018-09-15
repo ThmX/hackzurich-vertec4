@@ -19,8 +19,8 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "")
 public class Project {
   
-  @SerializedName("id")
-  private Long id = null;
+  @SerializedName("_id")
+  private String id = null;
   @SerializedName("name")
   private String name = null;
   @SerializedName("description")
@@ -35,10 +35,10 @@ public class Project {
   /**
    **/
   @ApiModelProperty(value = "")
-  public Long getId() {
+  public String getId() {
     return id;
   }
-  public void setId(Long id) {
+  public void setId(String id) {
     this.id = id;
   }
 

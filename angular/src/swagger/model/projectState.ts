@@ -12,8 +12,8 @@
 
 
 export interface ProjectState {
-    id?: number;
-    projectId?: number;
+    id?: string;
+    projectId?: string;
     actual?: number;
     numberOfTasks?: number;
 }

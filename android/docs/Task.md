@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Long** |  |  [optional]
-**projectId** | **Long** |  |  [optional]
+**id** | **String** |  |  [optional]
+**projectId** | **String** |  |  [optional]
 **name** | **String** |  |  [optional]
 **description** | **String** |  |  [optional]
 **budget** | **Long** |  |  [optional]

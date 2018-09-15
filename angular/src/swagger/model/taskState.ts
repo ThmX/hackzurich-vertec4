@@ -12,8 +12,8 @@
 
 
 export interface TaskState {
-    id?: number;
-    taskId?: number;
+    id?: string;
+    taskId?: string;
     actual?: number;
     numberOfEvents?: number;
 }

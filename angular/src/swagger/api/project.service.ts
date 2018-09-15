@@ -27,7 +27,7 @@ import { Configuration }                                     from '../configurat
 @Injectable()
 export class ProjectService {
 
-    protected basePath = 'http://hackzurich-vertec4.local/api';
+    protected basePath = 'http://localhost:8080/api';
     public defaultHeaders = new HttpHeaders();
     public configuration = new Configuration();
 
@@ -109,10 +109,10 @@ export class ProjectService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public deleteProject(projectId: number, observe?: 'body', reportProgress?: boolean): Observable<any>;
-    public deleteProject(projectId: number, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<any>>;
-    public deleteProject(projectId: number, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<any>>;
-    public deleteProject(projectId: number, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+    public deleteProject(projectId: string, observe?: 'body', reportProgress?: boolean): Observable<any>;
+    public deleteProject(projectId: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<any>>;
+    public deleteProject(projectId: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<any>>;
+    public deleteProject(projectId: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
         if (projectId === null || projectId === undefined) {
             throw new Error('Required parameter projectId was null or undefined when calling deleteProject.');
         }
@@ -149,10 +149,10 @@ export class ProjectService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getProjectById(projectId: number, observe?: 'body', reportProgress?: boolean): Observable<Project>;
-    public getProjectById(projectId: number, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<Project>>;
-    public getProjectById(projectId: number, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<Project>>;
-    public getProjectById(projectId: number, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+    public getProjectById(projectId: string, observe?: 'body', reportProgress?: boolean): Observable<Project>;
+    public getProjectById(projectId: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<Project>>;
+    public getProjectById(projectId: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<Project>>;
+    public getProjectById(projectId: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
         if (projectId === null || projectId === undefined) {
             throw new Error('Required parameter projectId was null or undefined when calling getProjectById.');
         }
@@ -226,10 +226,10 @@ export class ProjectService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public updateProject(projectId: number, body: Project, observe?: 'body', reportProgress?: boolean): Observable<any>;
-    public updateProject(projectId: number, body: Project, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<any>>;
-    public updateProject(projectId: number, body: Project, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<any>>;
-    public updateProject(projectId: number, body: Project, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+    public updateProject(projectId: string, body: Project, observe?: 'body', reportProgress?: boolean): Observable<any>;
+    public updateProject(projectId: string, body: Project, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<any>>;
+    public updateProject(projectId: string, body: Project, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<any>>;
+    public updateProject(projectId: string, body: Project, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
         if (projectId === null || projectId === undefined) {
             throw new Error('Required parameter projectId was null or undefined when calling updateProject.');
         }

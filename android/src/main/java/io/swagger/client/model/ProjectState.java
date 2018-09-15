@@ -18,10 +18,10 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "")
 public class ProjectState {
   
-  @SerializedName("id")
-  private Long id = null;
+  @SerializedName("_id")
+  private String id = null;
   @SerializedName("project_id")
-  private Long projectId = null;
+  private String projectId = null;
   @SerializedName("actual")
   private Long actual = null;
   @SerializedName("number_of_tasks")
@@ -30,20 +30,20 @@ public class ProjectState {
   /**
    **/
   @ApiModelProperty(value = "")
-  public Long getId() {
+  public String getId() {
     return id;
   }
-  public void setId(Long id) {
+  public void setId(String id) {
     this.id = id;
   }
 
   /**
    **/
   @ApiModelProperty(value = "")
-  public Long getProjectId() {
+  public String getProjectId() {
     return projectId;
   }
-  public void setProjectId(Long projectId) {
+  public void setProjectId(String projectId) {
     this.projectId = projectId;
   }
 

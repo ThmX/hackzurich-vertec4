@@ -12,8 +12,8 @@
 
 
 export interface Task {
-    id?: number;
-    projectId?: number;
+    id?: string;
+    projectId?: string;
     name?: string;
     description?: string;
     budget?: number;

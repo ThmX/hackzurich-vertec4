@@ -78,7 +78,7 @@ public class ProjectApiExample {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://hackzurich-vertec4.local/api*
+All URIs are relative to *http://localhost:8080/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

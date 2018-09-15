@@ -19,7 +19,7 @@ exports.createTask = function(body) {
  * Deletes a task
  * 
  *
- * taskId Long Task id to delete
+ * taskId String Task id to delete
  * no response value expected for this operation
  **/
 exports.deleteTask = function(taskId) {
@@ -33,7 +33,7 @@ exports.deleteTask = function(taskId) {
  * Find task by ID
  * Returns a single task
  *
- * taskId Long ID of task to return
+ * taskId String ID of task to return
  * returns Task
  **/
 exports.getTaskById = function(taskId) {
@@ -41,11 +41,11 @@ exports.getTaskById = function(taskId) {
     var examples = {};
     examples['application/json'] = {
   "end_date" : "2000-01-23T04:56:07.000+00:00",
-  "project_id" : 6,
+  "project_id" : "project_id",
   "name" : "name",
   "description" : "description",
-  "id" : 0,
-  "budget" : 1,
+  "_id" : "_id",
+  "budget" : 0,
   "start_date" : "2000-01-23T04:56:07.000+00:00"
 };
     if (Object.keys(examples).length > 0) {
@@ -67,19 +67,19 @@ exports.readTasks = function() {
     var examples = {};
     examples['application/json'] = [ {
   "end_date" : "2000-01-23T04:56:07.000+00:00",
-  "project_id" : 6,
+  "project_id" : "project_id",
   "name" : "name",
   "description" : "description",
-  "id" : 0,
-  "budget" : 1,
+  "_id" : "_id",
+  "budget" : 0,
   "start_date" : "2000-01-23T04:56:07.000+00:00"
 }, {
   "end_date" : "2000-01-23T04:56:07.000+00:00",
-  "project_id" : 6,
+  "project_id" : "project_id",
   "name" : "name",
   "description" : "description",
-  "id" : 0,
-  "budget" : 1,
+  "_id" : "_id",
+  "budget" : 0,
   "start_date" : "2000-01-23T04:56:07.000+00:00"
 } ];
     if (Object.keys(examples).length > 0) {
@@ -95,7 +95,7 @@ exports.readTasks = function() {
  * Updates a task
  * 
  *
- * taskId Long ID of task that needs to be updated
+ * taskId String ID of task that needs to be updated
  * body Task Task object that needs to be added
  * no response value expected for this operation
  **/

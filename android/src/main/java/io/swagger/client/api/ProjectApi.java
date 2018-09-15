@@ -36,7 +36,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class ProjectApi {
-  String basePath = "http://hackzurich-vertec4.local/api";
+  String basePath = "http://localhost:8080/api";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -185,7 +185,7 @@ public class ProjectApi {
    * @param projectId Project id to delete
    * @return void
   */
-  public void deleteProject (Long projectId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public void deleteProject (String projectId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'projectId' is set
     if (projectId == null) {
@@ -246,7 +246,7 @@ public class ProjectApi {
    * 
    * @param projectId Project id to delete
   */
-  public void deleteProject (Long projectId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void deleteProject (String projectId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'projectId' is set
@@ -308,7 +308,7 @@ public class ProjectApi {
    * @param projectId ID of project to return
    * @return Project
   */
-  public Project getProjectById (Long projectId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public Project getProjectById (String projectId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'projectId' is set
     if (projectId == null) {
@@ -369,7 +369,7 @@ public class ProjectApi {
    * Returns a single project
    * @param projectId ID of project to return
   */
-  public void getProjectById (Long projectId, final Response.Listener<Project> responseListener, final Response.ErrorListener errorListener) {
+  public void getProjectById (String projectId, final Response.Listener<Project> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'projectId' is set
@@ -552,7 +552,7 @@ public class ProjectApi {
    * @param body Project object that needs to be added
    * @return void
   */
-  public void updateProject (Long projectId, Project body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public void updateProject (String projectId, Project body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = body;
     // verify the required parameter 'projectId' is set
     if (projectId == null) {
@@ -619,7 +619,7 @@ public class ProjectApi {
    * 
    * @param projectId ID of project that needs to be updated   * @param body Project object that needs to be added
   */
-  public void updateProject (Long projectId, Project body, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void updateProject (String projectId, Project body, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = body;
 
     // verify the required parameter 'projectId' is set

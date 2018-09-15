@@ -27,7 +27,7 @@ import { Configuration }                                     from '../configurat
 @Injectable()
 export class TaskService {
 
-    protected basePath = 'http://hackzurich-vertec4.local/api';
+    protected basePath = 'http://localhost:8080/api';
     public defaultHeaders = new HttpHeaders();
     public configuration = new Configuration();
 
@@ -109,10 +109,10 @@ export class TaskService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public deleteTask(taskId: number, observe?: 'body', reportProgress?: boolean): Observable<any>;
-    public deleteTask(taskId: number, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<any>>;
-    public deleteTask(taskId: number, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<any>>;
-    public deleteTask(taskId: number, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+    public deleteTask(taskId: string, observe?: 'body', reportProgress?: boolean): Observable<any>;
+    public deleteTask(taskId: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<any>>;
+    public deleteTask(taskId: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<any>>;
+    public deleteTask(taskId: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
         if (taskId === null || taskId === undefined) {
             throw new Error('Required parameter taskId was null or undefined when calling deleteTask.');
         }
@@ -149,10 +149,10 @@ export class TaskService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getTaskById(taskId: number, observe?: 'body', reportProgress?: boolean): Observable<Task>;
-    public getTaskById(taskId: number, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<Task>>;
-    public getTaskById(taskId: number, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<Task>>;
-    public getTaskById(taskId: number, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+    public getTaskById(taskId: string, observe?: 'body', reportProgress?: boolean): Observable<Task>;
+    public getTaskById(taskId: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<Task>>;
+    public getTaskById(taskId: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<Task>>;
+    public getTaskById(taskId: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
         if (taskId === null || taskId === undefined) {
             throw new Error('Required parameter taskId was null or undefined when calling getTaskById.');
         }
@@ -226,10 +226,10 @@ export class TaskService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public updateTask(taskId: number, body: Task, observe?: 'body', reportProgress?: boolean): Observable<any>;
-    public updateTask(taskId: number, body: Task, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<any>>;
-    public updateTask(taskId: number, body: Task, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<any>>;
-    public updateTask(taskId: number, body: Task, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+    public updateTask(taskId: string, body: Task, observe?: 'body', reportProgress?: boolean): Observable<any>;
+    public updateTask(taskId: string, body: Task, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<any>>;
+    public updateTask(taskId: string, body: Task, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<any>>;
+    public updateTask(taskId: string, body: Task, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
         if (taskId === null || taskId === undefined) {
             throw new Error('Required parameter taskId was null or undefined when calling updateTask.');
         }

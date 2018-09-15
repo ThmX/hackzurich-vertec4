@@ -36,7 +36,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class TaskApi {
-  String basePath = "http://hackzurich-vertec4.local/api";
+  String basePath = "http://localhost:8080/api";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -185,7 +185,7 @@ public class TaskApi {
    * @param taskId Task id to delete
    * @return void
   */
-  public void deleteTask (Long taskId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public void deleteTask (String taskId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'taskId' is set
     if (taskId == null) {
@@ -246,7 +246,7 @@ public class TaskApi {
    * 
    * @param taskId Task id to delete
   */
-  public void deleteTask (Long taskId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void deleteTask (String taskId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'taskId' is set
@@ -308,7 +308,7 @@ public class TaskApi {
    * @param taskId ID of task to return
    * @return Task
   */
-  public Task getTaskById (Long taskId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public Task getTaskById (String taskId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'taskId' is set
     if (taskId == null) {
@@ -369,7 +369,7 @@ public class TaskApi {
    * Returns a single task
    * @param taskId ID of task to return
   */
-  public void getTaskById (Long taskId, final Response.Listener<Task> responseListener, final Response.ErrorListener errorListener) {
+  public void getTaskById (String taskId, final Response.Listener<Task> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'taskId' is set
@@ -552,7 +552,7 @@ public class TaskApi {
    * @param body Task object that needs to be added
    * @return void
   */
-  public void updateTask (Long taskId, Task body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public void updateTask (String taskId, Task body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = body;
     // verify the required parameter 'taskId' is set
     if (taskId == null) {
@@ -619,7 +619,7 @@ public class TaskApi {
    * 
    * @param taskId ID of task that needs to be updated   * @param body Task object that needs to be added
   */
-  public void updateTask (Long taskId, Task body, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void updateTask (String taskId, Task body, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = body;
 
     // verify the required parameter 'taskId' is set
